@@ -1,0 +1,7 @@
+name: test-microvm-runner
+on: workflow_dispatch
+jobs:
+  hello:
+    runs-on: [self-hosted, microvm, ephemeral, linux, arm64]
+    steps:
+      - run: echo "Hello from Lambda MicroVM"
