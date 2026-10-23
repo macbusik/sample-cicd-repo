@@ -2,6 +2,6 @@ name: test-microvm-runner
 on: workflow_dispatch
 jobs:
   hello:
-    runs-on: [self-hosted, microvm, ephemeral, linux, arm64]
+    runs-on: codebuild-gh-selfhosted-runners-codebuild-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - run: echo "Hello from Lambda MicroVM"
+      - run: echo "Hello from CodeBuild hosted runner"
